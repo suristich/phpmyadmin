@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class RegistroAlumno{
+private String nombre;
+private int promactual;
+public void establecerNombre(String nombre)
+{
+this.nombre=nombre;
+}
+public void establecerPromedio(int promedio)
+{
+this.promactual=promedio;
+}
+public String obtenerNombre()
+{
+return nombre;
+}
+public int obtenerPromedio()
+{
+return promactual;
+}
+public static void main(String[] args) {
+Scanner entrada =new Scanner (System.in);
+RegistroAlumno asignadatos= new RegistroAlumno();
+System.out.println("Ingresa Nombre");
+String elnombre=entrada.nextLine();
+
+System.out.println("Ingresa Promedio");
+int promedio=entrada.nextInt();
+asignadatos.establecerPromedio(promedio);
+asignadatos.establecerNombre(elnombre);
+System.out.println("El nombre registrado es:" +
+asignadatos.obtenerNombre());
+System.out.println("Su promedio actual es:" +
+asignadatos.obtenerPromedio());
+}
+}
